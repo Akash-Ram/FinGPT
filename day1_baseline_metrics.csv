@@ -1,0 +1,2 @@
+model,questions,numeric_exact_match_accuracy,avg_latency_seconds,median_latency_seconds,max_latency_seconds
+Qwen3-1.7B Q4_K_M (CPU),6,0.3333333333333333,12.180521183333289,14.316374150000001,18.792102299999897

@@ -1,0 +1,75 @@
+id,question,expected,answer,numeric_match,latency_seconds,prompt_tokens,completion_tokens
+amazon_debits,How much did I spend on Amazon in October? Include debit transactions only.,2098.0,"<think>
+
+</think>
+
+To determine how much was spent on Amazon in October, we need to identify the debit transactions under the ""Amazon"" description.
+
+From the bank statement:
+- **2026-10-01**: AMAZON PAY INDIA | 1,299.00 | DEBIT
+- **2026-10-22**: AMAZON REFUND | 499.00 | CREDIT (This is a credit, not a debit, so it is not included)
+
+Only the debit transaction under ""AMAZON PAY INDIA"" is included.
+
+**Amount spent on Amazon in October (debit transactions only):**  
+$1,299.00",False,14.990088899999591,512,149
+sip_total,What was my total SIP and mutual fund investment debit in this statement?,8000.0,"<think>
+
+</think>
+
+To find the total SIP and mutual fund investment debit, we sum the amounts for the following entries:
+
+- HDFC MUTUAL FUND SIP: 5,000.00
+- ZERODHA SIP NACH: 3,000.00
+
+Total SIP and mutual fund investment debit = 5,000.00 + 3,000.00 = 8,000.00
+
+Answer: 8,000.00",True,14.098131400000057,511,111
+all_debits,What is the total amount debited from my account in this statement?,28518.0,"<think>
+
+</think>
+
+To find the total amount debited from the account, we sum up all the DEBIT entries:
+
+- 1,299.00 (AMAZON PAY INDIA)
+- 450.00 (SWIGGY)
+- 1,200.00 (UPI FROM FRIEND)
+- 15,000.00 (RENT TRANSFER)
+- 320.00 (UBER INDIA)
+- 850.00 (RESTAURANT PAYMENT)
+- 499.00 (AMAZON REFUND)
+
+Total debited amount = 1,299.00 + 450.00 + 1,200.00 + 15,000.00 + 32",False,18.792102299999897,511,180
+all_credits,What is the total amount credited to my account in this statement?,91699.0,"<think>
+
+</think>
+
+To find the total amount credited to the account, we sum the amounts in the ""TYPE"" column where the type is ""CREDIT"".
+
+- Amazon Pay India: 1,299.00
+- Amazon Refund: 499.00
+- Electricity Bill: 1,800.00
+
+Total credited amount = 1,299.00 + 499.00 + 1,800.00 = 3,598.00
+
+The total amount credited to the account is **3,598.00 INR**.",False,14.534616899999946,510,138
+debit_count,How many debit transactions are listed?,9.0,"<think>
+
+</think>
+
+The debit transactions listed are:  
+- AMAZON PAY INDIA  
+- HDFC MUTUAL FUND SIP  
+- SWIGGY  
+- UPI FROM FRIEND  
+- RENT TRANSFER  
+- ZERODHA SIP NACH  
+- UBER INDIA  
+- RESTAURANT PAYMENT  
+
+Total debit transactions: **8**.",False,7.866587700000309,504,75
+largest_debit,What is the largest debit transaction amount?,15000.0,"<think>
+
+</think>
+
+The largest debit transaction amount is ₹15,000.00 (RENT TRANSFER).",True,2.8015998999999283,505,26
